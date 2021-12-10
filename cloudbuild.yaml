@@ -6,5 +6,5 @@ steps:
   args: [-c, 'pip install -r requirements.txt && pytest']
   dir: 'src'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'cloudfun0', 'http', '--runtime', 'python39', '--entry-point', 'cloudfun0']
+  args: ['functions', 'deploy', 'cloudfun0', '--trigger-http', '--runtime', 'python39', '--entry-point', 'cloudfun0']
   dir: 'src'
